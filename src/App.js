@@ -9,14 +9,18 @@ class App extends Component {
     this.state = {
       darkModeEnabled: false,
       lightTheme: {
-        height: '100vh',
+        height: '100%',
+        width: '100%',
+        overflow: 'hidden',
         background: 'white',
         color: 'black',
         transition: 'background-color 0.3s ease-out'
       },
       darkTheme: {
-        height: '100vh',
-        background: 'rgb(34, 33, 33)',
+        height: '100%',
+        width: '100%',
+        overflow: 'hidden',
+        background: '#252525',
         color: 'rgb(241, 241, 241)',
         transition: 'background-color 0.3s ease-out'
       },
@@ -39,8 +43,8 @@ class App extends Component {
       <div className="App" style={this.state.theme}>
         <div className="wrapper" >
           <Header changeTheme={this.changeTheme}></Header>
-          <Bloglist>
-            
+
+          <Bloglist darkModeEnabled={this.state.darkModeEnabled}>
           </Bloglist>
         </div>
       </div>

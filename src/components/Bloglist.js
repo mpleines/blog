@@ -46,11 +46,15 @@ class Bloglist extends Component {
         <div style={postsStyle}>
 
         {this.state.posts.map(post => {
-            return <Blogpost title={post.title} content={post.content}></Blogpost>
+            return <Blogpost darkModeEnabled={this.props.darkModeEnabled} title={post.title} content={post.content}></Blogpost>
         })}
 
         </div>
     );
+  }
+
+  componentDidMount () {
+    console.log(this.props.darkModeEnabled)
   }
 }
 
