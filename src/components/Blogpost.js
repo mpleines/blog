@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
+import BlogpostView from './BlogpostView';
 
 class Blogpost extends Component {
   render() {
     return (
         <div style={postStyle}>
           <h2>
-            <a href="http://localhost:3000" style={this.props.darkModeEnabled ? titleStyleDark : titleStyleLight}> 
-              {this.props.title}
-            </a>
+            <Link 
+              style={this.props.darkModeEnabled ? titleStyleDark : titleStyleLight}
+              to={{ 
+                pathname: '/BlogpostView', 
+                state: { post: this.props.post } 
+              }}
+            > 
+              {this.props.post.title}
+            </Link>
+
           </h2>
-          <span style={{fontSize: '0.85rem'}}>March 6, 2019 • 10min read</span>
+          <span style={{fontSize: '0.85rem'}}>March 6, 2019 • {this.props.post.readingTime}min read</span>
           
-          <p>{this.props.content}</p>
+          <p>{this.props.post.preview}</p>
         </div>
     );
   }
@@ -22,11 +31,11 @@ class Blogpost extends Component {
 }
 
 const postStyle= {
-  marginTop: '10px'
+  marginTop: '12px'
 };
 
-const titleStyleDark = {color: '#8333ff', textDecoration: 'none'};
-const titleStyleLight = {color: '#5e14d1', textDecoration: 'none'};
+const titleStyleDark = {color: '#8333ff', textDecoration: 'none', fontSize: '1.75rem', fontWeight: 'bold'};
+const titleStyleLight = {color: '#5e14d1', textDecoration: 'none', fontSize: '1.75rem',};
 
 
 export default Blogpost;

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Header from './components/Header';
 import Bloglist from './components/Bloglist'
 import './App.css';
+import { BrowserRouter as Router, Route} from "react-router-dom";
+import BlogpostView from './components/BlogpostView';
 
 class App extends Component {
   constructor () {
@@ -42,10 +44,21 @@ class App extends Component {
     return (
       <div className="App" style={this.state.theme}>
         <div className="wrapper" >
-          <Header changeTheme={this.changeTheme}></Header>
+          <Header darkModeEnabled={this.state.darkModeEnabled} changeTheme={this.changeTheme}></Header>
 
-          <Bloglist darkModeEnabled={this.state.darkModeEnabled}>
-          </Bloglist>
+          <Router>
+            <div>
+              <Route 
+                exact path="/" 
+                render={(props) => <Bloglist {...props} darkModeEnabled={this.state.darkModeEnabled} />}
+              />
+              <Route
+                path="/BlogpostView"
+                component={BlogpostView}
+              ></Route>
+            </div>
+          </Router>
+
         </div>
       </div>
     );

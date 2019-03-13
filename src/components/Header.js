@@ -16,7 +16,7 @@ class Header extends Component {
                 />
             </div>
             <div style={blogInfoStyle}>
-                personal blog by Maik Pleines
+                personal blog by <a href="https://github.com/devilsdev" style={this.props.darkModeEnabled ? linkStyleDark : linkStyleLight}>Maik Pleines</a>
             </div>
         </header>
     );
@@ -42,7 +42,19 @@ const switchLabelStyle = {
 };
 
 const blogInfoStyle = {
-    marginTop: '2rem'
+    marginTop: '2rem',
+};
+
+const linkStyleDark = {
+    textDecoration: 'none',
+    color: 'white',
+    borderBottom: '1px solid #8333ff'
+};
+
+const linkStyleLight = {
+    textDecoration: 'none',
+    color: 'black',
+    borderBottom: '1px solid #5e14d1'
 };
 
 export default Header;
