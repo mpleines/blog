@@ -11,7 +11,6 @@ class App extends Component {
     this.state = {
       darkModeEnabled: false,
       lightTheme: {
-        height: '100%',
         width: '100%',
         overflow: 'hidden',
         background: 'white',
@@ -19,7 +18,6 @@ class App extends Component {
         transition: 'background-color 0.3s ease-out'
       },
       darkTheme: {
-        height: '100%',
         width: '100%',
         overflow: 'hidden',
         background: '#252525',

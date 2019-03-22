@@ -4,12 +4,10 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
 }
 
 #root {
   width: 100%;
-  height: 100%; 
 }
 
 h1 {
@@ -31,6 +29,8 @@ h2 {
 .wrapper {
   margin-left: auto;
   margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
   max-width: 40rem;
   font-family: 'Poppins';
   letter-spacing: 1.5px;

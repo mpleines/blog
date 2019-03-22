@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export class BlogpostView extends Component {
 
@@ -25,9 +25,19 @@ export class BlogpostView extends Component {
             <img src="https://loremflickr.com/320/240" />
           </div>
         </div>
+
+        <div style={bottomNavStyle}>
+          <Link style={{color: '#8333ff'}} to="/">← back</Link>
+          <span style={{float: 'right'}}>©Maik Pleines</span>
+        </div>
       </div>
     )
   }
+}
+
+const bottomNavStyle = {
+  marginTop: '2rem',
+  height: '3rem'
 }
 
 export default BlogpostView
