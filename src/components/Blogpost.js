@@ -34,8 +34,8 @@ const postStyle= {
   marginTop: '12px'
 };
 
-const titleStyleDark = {color: '#8333ff', textDecoration: 'none', fontSize: '1.75rem', fontWeight: 'bold'};
-const titleStyleLight = {color: '#5e14d1', textDecoration: 'none', fontSize: '1.75rem',};
+const titleStyleDark = {color: '#8333ff', textDecoration: 'none', fontSize: '2rem', letterSpacing: '0.2rem', fontWeight: '900'};
+const titleStyleLight = {color: '#5e14d1', textDecoration: 'none', fontSize: '2rem', letterSpacing: '0.2rem', fontWeight: '900'};
 
 
 export default Blogpost;

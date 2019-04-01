@@ -13,7 +13,7 @@ class Bloglist extends Component {
             created: new Date(),
             preview: 'This one is sure interesting',
             readingTime: 3,
-            content: 'Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum..'
+            content: `![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")`
         },
         {
           id: 2,
@@ -21,95 +21,7 @@ class Bloglist extends Component {
           created: new Date(),
           preview: 'This one is maybe a bit longer',
           readingTime: 10,
-          content: 'Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum..'
-      },
-      {
-        id: 3,
-        title: 'Ein Blog Eintrag',
-        created: new Date(),
-        preview: 'Something about this blog..',
-        readingTime: 5,
-        content: 'Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum..'
-      },
-      {
-        id: 3,
-        title: 'Ein Blog Eintrag',
-        created: new Date(),
-        preview: 'Something about this blog..',
-        readingTime: 5,
-        content: 'Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum..'
-      },
-      {
-        id: 3,
-        title: 'Ein Blog Eintrag',
-        created: new Date(),
-        preview: 'Something about this blog..',
-        readingTime: 5,
-        content: 'Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum..'
-      },
-      {
-        id: 3,
-        title: 'Ein Blog Eintrag',
-        created: new Date(),
-        preview: 'Something about this blog..',
-        readingTime: 5,
-        content: 'Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum..'
-      },
-      {
-        id: 3,
-        title: 'Ein Blog Eintrag',
-        created: new Date(),
-        preview: 'Something about this blog..',
-        readingTime: 5,
-        content: 'Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum..'
-      },
-      {
-        id: 3,
-        title: 'Ein Blog Eintrag',
-        created: new Date(),
-        preview: 'Something about this blog..',
-        readingTime: 5,
-        content: 'Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum..'
-      },
-      {
-        id: 3,
-        title: 'Ein Blog Eintrag',
-        created: new Date(),
-        preview: 'Something about this blog..',
-        readingTime: 5,
-        content: 'Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum..'
-      },
-      {
-        id: 3,
-        title: 'Ein Blog Eintrag',
-        created: new Date(),
-        preview: 'Something about this blog..',
-        readingTime: 5,
-        content: 'Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum..'
-      },
-      {
-        id: 3,
-        title: 'Ein Blog Eintrag',
-        created: new Date(),
-        preview: 'Something about this blog..',
-        readingTime: 5,
-        content: 'Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum..'
-      },
-      {
-        id: 3,
-        title: 'Ein Blog Eintrag',
-        created: new Date(),
-        preview: 'Something about this blog..',
-        readingTime: 5,
-        content: 'Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum..'
-      },
-      {
-        id: 3,
-        title: 'Ein Blog Eintrag',
-        created: new Date(),
-        preview: 'Something about this blog..',
-        readingTime: 5,
-        content: 'Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum.. Lorem Ipsum..'
+          content: `## Emphasis **This is bold text** \n hello`
       }
     ]
   }

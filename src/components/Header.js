@@ -42,7 +42,7 @@ const switchLabelStyle = {
 };
 
 const blogInfoStyle = {
-    marginTop: '2rem',
+    marginTop: '1rem',
 };
 
 const linkStyleDark = {
