@@ -13,7 +13,7 @@ class Bloglist extends Component {
             created: new Date(),
             preview: 'This one is sure interesting',
             readingTime: 3,
-            content: `![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")`
+            content: `##hello this is maik speaking,\ni would like to welcome you to my blog! [I'm an inline-style link](https://www.google.com)`
         },
         {
           id: 2,
@@ -21,7 +21,9 @@ class Bloglist extends Component {
           created: new Date(),
           preview: 'This one is maybe a bit longer',
           readingTime: 10,
-          content: `## Emphasis **This is bold text** \n hello`
+          content: `## Emphasis **This is bold text**\n 
+            hello this is a :smile: smile emoji
+          `
       }
     ]
   }
