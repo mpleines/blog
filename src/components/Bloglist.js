@@ -13,7 +13,8 @@ class Bloglist extends Component {
             created: new Date(),
             preview: 'This one is sure interesting',
             readingTime: 3,
-            content: `##hello this is maik speaking,\ni would like to welcome you to my blog! [I'm an inline-style link](https://www.google.com)`
+            content: `It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)  
+            why are you mad?`
         },
         {
           id: 2,
@@ -21,9 +22,7 @@ class Bloglist extends Component {
           created: new Date(),
           preview: 'This one is maybe a bit longer',
           readingTime: 10,
-          content: `## Emphasis **This is bold text**\n 
-            hello this is a :smile: smile emoji
-          `
+          content: `test`
       }
     ]
   }

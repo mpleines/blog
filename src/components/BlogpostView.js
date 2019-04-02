@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import { Markdown } from 'react-showdown';
+import Markdown from 'react-markdown';
+import { breaks } from 'remark-breaks'
 
 export class BlogpostView extends Component {
   render() {
@@ -13,7 +14,7 @@ export class BlogpostView extends Component {
         </header>
 
         <main style={{marginTop: '15px'}}>
-          <Markdown markup={content} />
+          <Markdown source={content} plugins={[breaks]} />
         </main>
 
         <footer style={bottomNavStyle}>
