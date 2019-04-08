@@ -13,8 +13,7 @@ class Bloglist extends Component {
             created: new Date(),
             preview: 'This one is sure interesting',
             readingTime: 3,
-            content: `It's very easy to make some words **bold** and other words *italic* with Markdown. You can even [link to Google!](http://google.com)  
-            why are you mad?`
+            content: `Hi this is my first blog entry.`
         },
         {
           id: 2,

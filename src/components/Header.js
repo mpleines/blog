@@ -1,19 +1,34 @@
 import React, { Component } from 'react';
 
 class Header extends Component {
+  state = {
+    toggleIsActive: false
+  }
+  
+  toggleToggle = () => {
+    this.state.toggleIsActive = !this.state.toggleIsActive;
+    this.props.changeTheme()
+  }
+
   render() {
     return (
         <header style={headerStyle}>
             <h1>Blog.dev</h1>
             <div style={themeSwitcherStyle}>
-                <label style={switchLabelStyle} htmlFor="switchDarkMode" >Dark mode</label>
-                <input 
-                    style={switchStyle}
-                    name="switchDarkMode" 
-                    type="checkbox" 
-                    ref="complete"
-                    onChange={this.props.changeTheme} 
-                />
+
+                <label style={themeSwitcher}>
+                    <input 
+                        style={{display: 'none'}}
+                        type="checkbox"
+                        name="switchDarkMode" 
+                        type="checkbox" 
+                        ref="complete"
+                        // onChange={this.props.changeTheme this.toggleIsActive = !this.toggleIsActive} 
+                        onChange={this.toggleToggle}
+                    />
+                    <span style={this.state.toggleIsActive ? themeToggleActive : themeToggle}></span>
+                </label>
+
             </div>
             <div style={blogInfoStyle}>
                 personal blog by <a href="https://github.com/devilsdev" style={this.props.darkModeEnabled ? linkStyleDark : linkStyleLight}>Maik Pleines</a>
@@ -33,14 +48,6 @@ const themeSwitcherStyle = {
     lineHeight: '1.5rem'
 };
 
-const switchStyle = {
-    verticalAlign: 'middle'
-};
-  
-const switchLabelStyle = {
-    fontSize: '0.75rem'
-};
-
 const blogInfoStyle = {
     marginTop: '1rem',
 };
@@ -56,5 +63,37 @@ const linkStyleLight = {
     color: 'black',
     borderBottom: '1px solid #5e14d1'
 };
+
+const themeSwitcher = {
+    position: 'relative',
+    display: 'block',
+    width: '70px',
+    height: '35px',
+    backgroundColor: 'grey',
+    borderRadius: '35px'
+};
+
+const themeToggle = {
+    background: 'white',
+    position: 'absolute',
+    cursor: 'pointer',
+    top: 0, left: 0, right: 0, bottom: 0,
+    transition: '.5s ',
+    width: '35px',
+    height: '35px',
+    borderRadius: '50%'
+};
+
+const themeToggleActive = {
+    background: 'white',
+    position: 'absolute',
+    cursor: 'pointer',
+    top: 0, right: 0, bottom: 0,
+    transition: '.5s ',
+    width: '35px',
+    height: '35px',
+    borderRadius: '50%',
+    left: '50%'
+}
 
 export default Header;
