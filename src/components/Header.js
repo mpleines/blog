@@ -67,8 +67,8 @@ const linkStyleLight = {
 const themeSwitcher = {
     position: 'relative',
     display: 'block',
-    width: '70px',
-    height: '35px',
+    width: '3rem',
+    height: '1.5rem',
     backgroundColor: 'grey',
     borderRadius: '35px'
 };
@@ -79,8 +79,8 @@ const themeToggle = {
     cursor: 'pointer',
     top: 0, left: 0, right: 0, bottom: 0,
     transition: '.5s ',
-    width: '35px',
-    height: '35px',
+    width: '1.5rem',
+    height: '1.5rem',
     borderRadius: '50%'
 };
 
@@ -90,8 +90,8 @@ const themeToggleActive = {
     cursor: 'pointer',
     top: 0, right: 0, bottom: 0,
     transition: '.5s ',
-    width: '35px',
-    height: '35px',
+    width: '1.5rem',
+    height: '1.5rem',
     borderRadius: '50%',
     left: '50%'
 }
