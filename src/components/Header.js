@@ -13,7 +13,7 @@ class Header extends Component {
   render() {
     return (
         <header style={headerStyle}>
-            <h1>Blog.dev</h1>
+            <h1 style={{fontFamily: 'Pacifico'}}>The DevShip</h1>
             <div style={themeSwitcherStyle}>
 
                 <label style={themeSwitcher}>

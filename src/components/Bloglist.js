@@ -8,21 +8,15 @@ class Bloglist extends Component {
     this.state = {
       posts: [
         {
-            id: 1,
-            title: 'Ein Blog Eintrag',
-            created: new Date(),
-            preview: 'This one is sure interesting',
-            readingTime: 3,
-            content: `Hi this is my first blog entry.`
-        },
-        {
-          id: 2,
-          title: 'Zwei Blog Eintrag',
-          created: new Date(),
-          preview: 'This one is maybe a bit longer',
-          readingTime: 10,
-          content: `test`
-      }
+          id: 1,
+          title: 'Building this blog',
+          created: '15.04.2019',
+          preview: 'My plan on developing this blog',
+          readingTime: 3,
+          content: `This Blog is still under construction. 
+          I´m planning on developing a backend in NodeJS to store blog posts in a GraphQL database. 
+            Also i would like this page to render markdown syntax automatically, so i can write my blogposts easier.`
+        }
     ]
   }
 }

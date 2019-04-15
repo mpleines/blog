@@ -15,14 +15,14 @@ class App extends Component {
         overflow: 'hidden',
         background: 'white',
         color: 'black',
-        transition: 'background-color 0.3s ease-out'
+        transition: 'background-color 0.7s ease-out'
       },
       darkTheme: {
         width: '100%',
         overflow: 'hidden',
         background: '#252525',
         color: 'rgb(241, 241, 241)',
-        transition: 'background-color 0.3s ease-out'
+        transition: 'background-color 0.7s ease-out'
       },
       theme: this.darkModeEnabled ? this.darkTheme : this.lightTheme
     }
