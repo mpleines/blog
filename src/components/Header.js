@@ -31,7 +31,7 @@ class Header extends Component {
 
             </div>
             <div style={blogInfoStyle}>
-                personal blog by <a href="https://github.com/devilsdev" style={this.props.darkModeEnabled ? linkStyleDark : linkStyleLight}>Maik Pleines</a>
+                personal blog by <a href="https://github.com/mpleines" style={this.props.darkModeEnabled ? linkStyleDark : linkStyleLight}>Maik Pleines</a>
             </div>
         </header>
     );
