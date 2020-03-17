@@ -3,14 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.8.3",
-    "react-dom": "^16.8.3",
-    "react-markdown": "^4.0.6",
+    "moment": "^2.24.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
+    "react-markdown": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.5",
     "react-showdown": "^1.6.0",
-    "remark-breaks": "^1.0.2",
-    "showdown": "^1.9.0"
+    "remark-breaks": "^1.0.3",
+    "showdown": "^1.9.1"
   },
   "scripts": {
     "start": "react-scripts start",
