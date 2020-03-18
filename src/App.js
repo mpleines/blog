@@ -35,7 +35,7 @@ function App() {
   }
   // fetches all blogposts
   const getBlogPosts = async () => {
-    let request = await fetch('http://localhost:8080/posts')
+    let request = await fetch('https://gentle-brook-13991.herokuapp.com/posts')
     let data = await request.json()
     return data
   }
