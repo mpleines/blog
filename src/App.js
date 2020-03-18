@@ -4,11 +4,15 @@ import Bloglist from './components/Bloglist'
 import './App.css'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import BlogpostView from './components/BlogpostView'
+import Loader from './components/Loader'
+import ErrorMessage from './components/ErrorMessage'
 import { PostContext } from './PostContext'
 
 function App() {
   const [darkModeEnabled, setDarkModeEnabled] = useState(false)
   const [posts, setPosts] = useState([])
+  const [currentState, setCurrentState] = useState('pending')
+
   const themes = {
     lightTheme: {
       width: '100%',
@@ -31,20 +35,20 @@ function App() {
   }
   // fetches all blogposts
   const getBlogPosts = async () => {
-    try {
-      let request = await fetch('http://localhost:8080/posts')
-      let data = await request.json()
-      return data
-    } catch (err) {
-      console.log(err)
-    }
+    let request = await fetch('http://localhost:8080/posts')
+    let data = await request.json()
+    return data
   }
 
   useEffect(() => {
     async function fetchData() {
-      let blogPosts = await getBlogPosts()
-      await setPosts(blogPosts)
-      console.log(blogPosts)
+      try {
+        let blogPosts = await getBlogPosts()
+        await setPosts(blogPosts)
+        setCurrentState('loaded')
+      } catch (err) {
+        setCurrentState('error')
+      }
     }
     fetchData()
   }, [])
@@ -59,20 +63,24 @@ function App() {
           darkModeEnabled={darkModeEnabled}
           changeTheme={toggleTheme}
         ></Header>
-        <Router>
-          <div>
-            <PostContext.Provider value={posts}>
-              <Route
-                exact
-                path="/"
-                render={props => (
-                  <Bloglist {...props} darkModeEnabled={darkModeEnabled} />
-                )}
-              />
-            </PostContext.Provider>
-            <Route path="/BlogpostView" component={BlogpostView}></Route>
-          </div>
-        </Router>
+        {currentState === 'error' ? <ErrorMessage /> : null}
+        {currentState === 'pending' ? <Loader /> : null}
+        {currentState === 'loaded' ? (
+          <Router>
+            <div>
+              <PostContext.Provider value={posts}>
+                <Route
+                  exact
+                  path="/"
+                  render={props => (
+                    <Bloglist {...props} darkModeEnabled={darkModeEnabled} />
+                  )}
+                />
+              </PostContext.Provider>
+              <Route path="/BlogpostView" component={BlogpostView}></Route>
+            </div>
+          </Router>
+        ) : null}
       </div>
     </div>
   )
