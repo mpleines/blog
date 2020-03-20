@@ -44,7 +44,7 @@ function App() {
     async function fetchData() {
       try {
         let blogPosts = await getBlogPosts()
-        await setPosts(blogPosts)
+        setPosts(blogPosts)
         setCurrentState('loaded')
       } catch (err) {
         setCurrentState('error')
